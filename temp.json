@@ -1,0 +1,10 @@
+{
+    "title": "Contract Title",
+    "topFiveDetails": {
+      "firstDetail": "first detail of contract",
+      "secondDetail": "second detail of contract",
+      "thirdDetail": "third detail of contract",
+      "forthDetail": "forth detail of contract",
+      "fifthDetail": "fifth detail of contract",
+    }
+  }
