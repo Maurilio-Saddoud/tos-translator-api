@@ -1,15 +1,14 @@
 const express = require("express");
-// const testKeyRoutes = require("./routes/testKeyRoutes");
-// const weatherRoutes = require("./routes/weatherRoutes");
-// const openaiRoutes = require("./routes/openaiRoutes");
+const cors = require('cors')
+const openaiRoutes = require("./routes/openaiRoutes")
+const weatherRoutes = require("./routes/weatherRoutes")
 
 const app = express();
 app.use(express.json());
+app.use(cors())
 
-// Directly setup your routes without waiting for DB connection
-// app.use("/api/testkeys", testKeyRoutes);
-// app.use("/api/weather", weatherRoutes);
-// app.use("/api/openai", openaiRoutes);
+app.use("/api/openai", openaiRoutes);
+app.use('/api/weather', weatherRoutes); 
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
